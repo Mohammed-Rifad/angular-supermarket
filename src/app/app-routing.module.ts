@@ -16,6 +16,7 @@ const routes: Routes = [
   { path : 'product-list', component : ProductListComponent},
   { path : 'product-details', component : ProductDetailsComponent},
   { path : 'my-cart', component : UserCartComponent},
+  { path: 'oncartAdmin', loadChildren: () => import('../modules/admin/admin.module').then(m => m.AdminModule) },
   { path : '**', redirectTo : 'dashboard'}
 
 
